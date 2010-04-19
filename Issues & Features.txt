@@ -21,6 +21,7 @@ DEFECT
 0.2
 - sign in
 - Ordinary REST
+- Splash Screen
 
 0.3
 - Copy To Clipboard
