@@ -1,9 +1,3 @@
-ISSUES
-------
-- No Options On Put/Post
-- 5000+ Characters turns inbox white
-- Problem with minimize
-
 CURRENT VERSION
 ---------------
 0.0 - Not deployed
@@ -12,11 +6,11 @@ ROAD MAP
 --------
 0.1 
 FEATURES
-- @github
 - configuration
 - Hotkeys
-DEFECT
-- No Option On Put Post
+ISSUES
+#1 Code Not In Git
+#2 No Options On Put
 
 0.2
 - sign in
