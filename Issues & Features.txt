@@ -9,7 +9,7 @@ FEATURES
 - configuration
 - Hotkeys
 ISSUES
-#1 Code Not In Git
+#1 Code Not In Git - Fixed
 #2 No Options On Put
 
 0.2
