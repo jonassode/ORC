@@ -24,7 +24,7 @@ class RestPage < Wx::Panel
       end
 
       # Save URL To Link List
-      MyYaml.add(url,'urls')
+      MyYamlList.add(url,'urls')
 
       # Set Body - XML or HTML
       if response.content_type == "text/xml"
@@ -52,7 +52,7 @@ class RestPage < Wx::Panel
     # Loading variables
     @at = AccessToken.new("profile")
     options = ["Get", "Put", "Post", "Delete"]   #labels for radio buttons
-    urls = MyYaml.load('urls')
+    urls = MyYamlList.load('urls')
 
     # Create Elements
     @text = StaticText.new(self, -1, 'Rest', DEFAULT_POSITION, DEFAULT_SIZE)

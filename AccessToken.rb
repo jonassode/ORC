@@ -1,32 +1,30 @@
 gem 'oauth'
 require 'oauth/consumer'
+require 'MyYaml'
 #require 'extensions'
 
 class AccessToken
   @consumer
   @access_token
-  @token
-  @secret
+  @config
 
   def initialize(profile)
     # Reading Access Details from file
-    file = File.open('access.token')
-    @token = file.readline.chomp
-    @secret = file.readline.chomp
+
+    @config = MyYamlHash.load('oauthconfig')
 
     # Create Access Token
-    @consumer = OAuth::Consumer.new OauthConfig::CONSUMER , OauthConfig::SECRET, {:site=>OauthConfig::SITE}
-    @access_token = OAuth::AccessToken.new(@consumer, @token, @secret)
+    @consumer = OAuth::Consumer.new @config['consumer_id'] , @config['consumer_secret'], { :site=>@config['site'] }
+    @access_token = OAuth::AccessToken.new(@consumer, @config['access_token'], @config['access_token_secret'])
   end
 
   def token
-    @token
+    @config['access_token']
   end
 
   def secret
-    @secret
+    @config['access_token_secret']
   end
-
 
   def put(url, options)
     # Building Parameters String
