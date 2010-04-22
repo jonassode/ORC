@@ -2,7 +2,7 @@ require 'yaml'
 
 class MyYaml
   # It's a List
-  # Unique
+  # Each Entry Is Unique
   # Sorted Alphabetically Ascending
 
   def self.load(file_name)
@@ -14,7 +14,7 @@ class MyYaml
   end
 
   def self.save(object, file_name)
-    File.open( file_name+'.yaml', 'w' ) do |out|
+    File.open( file_name+'.yaml', 'w+' ) do |out|
       YAML.dump( object, out )
     end
   end
