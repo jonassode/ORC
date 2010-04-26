@@ -1,3 +1,13 @@
+#-
+# MyYaml
+# A yaml wrapper library for Ruby. Simplifies using yaml as a List or a Hash
+# Homepage: http://github.com/jonassode/MyYaml
+#
+# 2010-04-26, Created, Jonas Söderström - version 0.1
+# 
+# Version 0.1
+#-
+
 require 'yaml'
 
 class MyYamlList
@@ -13,9 +23,9 @@ class MyYamlList
     return content
   end
 
-  def self.save(object, file_name)
+  def self.save(list, file_name)
     File.open( file_name+'.yaml', 'w+' ) do |out|
-      YAML.dump( object, out )
+      YAML.dump( list.uniq.sort, out )
     end
   end
 
