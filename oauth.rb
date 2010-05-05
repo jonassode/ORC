@@ -3,6 +3,9 @@ require 'oauth/consumer'
 require 'OauthConfig'
 require 'MyYaml'
 
+# This will be used in the future to create the login page
+# ! Do Not Remove ! 
+
 @config = MyYamlHash.load('oauthconfig')
 @consumer=OAuth::Consumer.new @config['consumer_id'] , @config['consumer_secret'], { :site=>@config['site'] }
 @request_token=@consumer.get_request_token
@@ -13,10 +16,6 @@ gets
 puts "Saving Access Token Details"
 puts @access_token.token
 puts @access_token.secret
-
-#file = File.open('access.token','w')
-#file.puts(@access_token.token)
-#file.puts(@access_token.secret)
 
 @config['access_token'] = @access_token.token
 @config['access_token_secret'] = @access_token.secret

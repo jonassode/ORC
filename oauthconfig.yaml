@@ -3,5 +3,5 @@ access_token:
 access_token_secret: 
 consumer_id: 
 consumer_secret: 
-site: 
-callback: 
+site: http://www.google.com
+callback: http://www.google.com

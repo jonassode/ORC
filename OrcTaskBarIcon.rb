@@ -1,4 +1,3 @@
-
 class OrcTaskBarIcon < TaskBarIcon
   @menu
 
@@ -25,7 +24,5 @@ class OrcTaskBarIcon < TaskBarIcon
     popup_menu(@menu)
     nil
   end
-
-
 
 end

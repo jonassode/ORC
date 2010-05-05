@@ -1,4 +1,4 @@
 urls.yaml
 access.token
 lib
-test*.yaml
+oauthconfig.yaml

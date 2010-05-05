@@ -11,7 +11,7 @@ include REXML
 
 # Oauth
 require 'AccessToken'
-require 'OauthConfig'
+#require 'OauthConfig'
 
 # ORC Gui
 require 'MyNotebook'
@@ -79,8 +79,9 @@ class MinimalApp < App
   end
 end
 
-# Creating Controller
+# Create Controller
 $controller = OrcController.new()
+# Start the Application
 $controller.start_app()
 
 

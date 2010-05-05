@@ -11,9 +11,6 @@ class OauthPage < Wx::Panel
     token = TextCtrl.new(self, -1, @at.token, DEFAULT_POSITION, DEFAULT_SIZE, TE_READONLY)
     secret_label = StaticText.new(self, -1, "Secret:", DEFAULT_POSITION, DEFAULT_SIZE)
     secret = TextCtrl.new(self, -1, @at.secret, DEFAULT_POSITION, DEFAULT_SIZE, TE_READONLY)
-    #    textbox = TextCtrl.new(self, -1, 'Default Textbox Value', DEFAULT_POSITION, DEFAULT_SIZE)
-    #    combobox = ComboBox.new(self, -1, 'Default Combo Text', DEFAULT_POSITION, DEFAULT_SIZE, ['Item 1', 'Item 2', 'Item 3'])
-    #    button = Button.new(self, -1, 'My Button Text', DEFAULT_POSITION, DEFAULT_SIZE)
 
     # Place Elements
     @sizer = Wx::BoxSizer.new(Wx::VERTICAL)
@@ -22,9 +19,6 @@ class OauthPage < Wx::Panel
     @sizer.add( token, 0, Wx::GROW|Wx::ALL, 2)
     @sizer.add( secret_label, 0, Wx::ALIGN_LEFT, 2)
     @sizer.add( secret, 0, Wx::GROW|Wx::ALL, 2)
-    #    @sizer.add( textbox, 1, Wx::GROW|Wx::ALL, 2)
-    #    @sizer.add( combobox, 0,  Wx::GROW, 2)
-    #    @sizer.add( button, 0, Wx::ALIGN_LEFT, 2)
 
     set_sizer(@sizer)
     show

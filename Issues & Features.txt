@@ -1,22 +1,21 @@
 CURRENT VERSION
 ---------------
-0.0 - Not deployed
+0.1 - Yay
 
 ROAD MAP
 --------
-0.1 
+0.2
 FEATURES
 - configuration
 - Hotkeys
 ISSUES
-#1 Code Not In Git - Fixed
 #2 No Options On Put
 
-0.2
+0.3
 - sign in
 - Ordinary REST
 - Splash Screen
 
-0.3
+0.4
 - Copy To Clipboard
 - Work Without Keys
