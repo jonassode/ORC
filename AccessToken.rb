@@ -1,16 +1,14 @@
 gem 'oauth'
 require 'oauth/consumer'
 require 'MyYaml'
-#require 'extensions'
 
 class AccessToken
   @consumer
   @access_token
   @config
 
-  def initialize(profile)
+  def initialize()
     # Reading Access Details from file
-
     @config = MyYamlHash.load('oauthconfig')
 
     # Create Access Token
@@ -36,10 +34,8 @@ class AccessToken
     return @access_token.put(url + parameters)
   end
 
-  def get(url, *options)
+  def get(url)
     # Doing Get and returning the response
-    # puts "-->" +  url
-    # return @access_token.request(:post_multi, url, options )
     return @access_token.get(url)
   end
 
@@ -48,7 +44,6 @@ class AccessToken
     options.each { |option|
       parameters = parameters + option[0] + "=" + option[1] + "&"
     }
-    puts @consumer.http.class
     # Doing Post and returning the response
     return @access_token.post(url, options )
   end

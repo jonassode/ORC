@@ -50,7 +50,7 @@ class RestPage < Wx::Panel
   def build
 
     # Loading variables
-    @at = AccessToken.new("profile")
+    @at = AccessToken.new()
     options = ["Get", "Put", "Post", "Delete"]   #labels for radio buttons
     urls = MyYamlList.load('urls')
 

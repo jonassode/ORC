@@ -3,7 +3,7 @@ class OauthPage < Wx::Panel
 
   def build
     # Load AT
-    @at = AccessToken.new("profile")
+    @at = AccessToken.new()
 
     # Create Elements
     welcome_text = StaticText.new(self, -1, 'Welcome to Oauth Page', DEFAULT_POSITION, DEFAULT_SIZE)
